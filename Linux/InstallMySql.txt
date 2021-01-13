@@ -1,0 +1,65 @@
+############### Install MYSQL  Username:"root"  Password:"password" #############################
+
+https://www.digitalocean.com/community/tutorials/how-to-use-mysql-or-mariadb-with-your-django-application-on-ubuntu-14-04
+ 
+1) Install following Packages
+~ sudo apt install mysql-client-core-5.7
+~ sudo apt install mariadb-client-core-10.1
+~ sudo apt-get install python3.8-dev libmysqlclient-dev  ----->check before use
+sudo apt-get install python3.8-dev 
+sudo apt-get install mysql-client
+sudo apt-get install libsqlclient-dev
+sudo apt-get install libssl-dev
+~ sudo apt-get install mysql-server
+
+2) Check Status
+~ systemctl status mysql
+
+3) Securing MySql(generate password)
+~ mysql_secure_installation
+
+4) Test MySql
+~ mysqladmin -u root -p version
+
+
+5) Run following to enter in Mysql
+~ mysql -u root -p
+
+
+6) In order to use MySQL with our project, we will need a Python 3 database connector library compatible with Django--->any one
+~ pip install mysqlclient
+~ pip install django mysqlclient
+~ pip install mysql-connector-python
+~ try other package
+
+7) Check or Insert following in Settings.py
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'myproject',
+        'USER': 'root',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+
+
+LANGUAGE_CODE = 'en-us'
+
+TIME_ZONE = 'UTC'
+
+USE_I18N = True
+
+USE_L10N = True
+
+USE_TZ = True
+
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+
+###############################################################################################################################

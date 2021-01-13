@@ -1,0 +1,23 @@
+#################### Install PyCharm ##########################
+1) Download Pycharm Professional and extract it
+
+2) Create Symbolik Link
+
+Create a desktop file
+Create a new file pycharmdesktop.desktop by running the command:
+
+:~$ nano ~/.local/share/applications/pycharmdesktop.desktop
+
+and add the lines below 
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=PyCharm
+Exec="/media/savetree/Anirudha/Python2020/pycharm-2019.3.3/bin/pycharm.sh" %f
+Icon=/media/savetree/Anirudha/Python2020/pycharm-2019.3.3/bin/pycharm.png
+Categories=Development;IDE;
+Terminal=false
+StartupNotify=true
+StartupWMClass=PyCharm
+

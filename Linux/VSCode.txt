@@ -1,0 +1,57 @@
+########## VS-Code for Python-Django ###################
+1) follow instruction from "InstallPython.txt"
+2) Open VSCode
+3) Install Python extention from Marketplace build by Microsoft
+4) Open terminal and create workplace directory --- > eg. myproject
+~ mkdir myproject
+~ cd myproject
+5) Install Virtual Environment Inside the myproject folder
+~ virtualenv venv -p python3.8
+6) Now before we start using it, we need to activate:
+~ source venv/bin/activate
+7) Installing Django
+~ pip install django
+8) Install follwoing for compatibility versions of python
+~ pip install six
+9) To start a new Django project, run the command below:
+~ django-admin startproject demo1
+10) open myproject directory in VScode
+11) Create "templates" directory in myproject
+12) Create "staticdata" directory in myproject
+13) Open settings.py and make changes in 
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        ,
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+14) for read static data make following changes in settings.py
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'staticdata/'),
+)
+
+13) Open Terminal and Go to project directory and run server locally
+~ python manage.py runserver
+14) for create apps in your project
+~ python manage.py startapp app1
+################################# Install Pypi Modules ##################################################
+pip install six
+pip install django
+pip install pillow
+pip3 install psycopg2-binary ----> for postgreSql
+
+

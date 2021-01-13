@@ -1,0 +1,18 @@
+################ Python- Django Important Sites ############################
+
+1) https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Web_frameworks
+
+2) https://djangopackages.org/
+
+3) https://www.djangoproject.com
+
+4) https://pypi.org/
+
+5) https://www.python.org/
+
+6) https://djangobook.com/mastering-django-2-book/?ref=hackr.io
+
+7) https://aws.amazon.com/getting-started/projects/deploy-python-application/
+
+
+#7c51c8

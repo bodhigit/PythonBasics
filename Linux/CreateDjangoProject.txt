@@ -1,0 +1,12 @@
+##################### Create Django Project ###################################
+
+1) Firstly Create Virtual Environment fololow "InstallPython.txt"
+
+2) To start a new Django project, run the command below:
+~ django-admin startproject myproject
+
+3) Go to project directory and run server locally
+~ cd myproject
+~ python manage.py runserver
+
+4) Hit Control + C to stop the development server.

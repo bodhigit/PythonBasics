@@ -1,0 +1,59 @@
+#################### PostgreSQL Installation ###################################
+  
+  https://www.postgresql.org/download/linux/ubuntu/
+
+1) Create the file /etc/apt/sources.list.d/pgdg.list and add a line for the repository 
+deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main
+
+2) Import the repository signing key, and update the package lists 
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+sudo apt-get update
+
+3) apt-get install postgresql-11 
+
+4) apt-get install pgadmin4
+
+5) Switch over to the postgres server by typing:
+sudo -u postgres psql
+
+6) Exit out of the PostgreSQL prompt by typing:
+\q
+
+7) Creating a New Role / User
+sudo -u postgres createuser --interactive
+
+8) \conninfo
+You are connected to database "postgres" as user "postgres" via socket in "/var/run/postgresql" at port "5432".
+
+9) By default username is postgres required to set password for that switch to template1
+sudo -u postgres psql template1
+
+10) postgres=# ALTER USER postgres PASSWORD '123';
+If successful, Postgres will output a confirmation of ALTER ROLE
+
+11) Open pgAdmin4 and Add new Server and configure server as per below
+
+General --> name of server i.e. localserver
+Connection --> host name i.e. 127.0.0.1
+               port       i.e. 5432
+               username    i.e     postgres 
+               password    i.e 123
+               
+12) Install Python Connector
+pip3 install psycopg2-binary   
+
+13} Make Changes in setting.py
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'vtwebsite',
+        'USER': 'postgres',
+        'PASSWORD': '123',
+        'HOST': 'localhost',
+    }
+}             
+
+
+####################################################################################
+

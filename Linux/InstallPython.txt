@@ -1,0 +1,54 @@
+###################### Install Python ##################################
+https://simpleisbetterthancomplex.com/series/2017/09/04/a-complete-beginners-guide-to-django-part-1.html
+
+1) Add Repository
+~ sudo add-apt-repository ppa:deadsnakes/ppa
+
+2) Update System
+~ sudo apt-get update
+
+3) Install Python
+~ sudo apt-get install python3.8
+
+4) Check Version
+~ python3.8 --version
+
+5) Install Virtualenv
+~ wget https://bootstrap.pypa.io/get-pip.py
+~ sudo python3.8 get-pip.py
+- sudo apt-get install python3.8-distutils
+~ sudo pip3.8 install virtualenv
+
+From now on, everything we install, including Django itself, will be installed inside a Virtual Environment.
+
+6) Make Parent Directory for Project
+~ mkdir myproject
+~ cd myproject
+
+7) Install Virtual Environment Inside the myproject folder
+~ virtualenv venv -p python3.8
+
+8) Now before we start using it, we need to activate:
+~ source venv/bin/activate
+
+Note that when we have the venv activated, we will use the command python (instead of python3.6) to refer to Python 3.6.2, and just pip (instead of pip3.6) to install packages.
+
+9) its optional --- deactivate the venv run the command below:
+~ deactivate
+
+10) Installing Django
+~ pip install django
+
+11) Install follwoing for compatibility versions of python
+~ pip install six
+
+#####################################################################################################################################
+
+
+
+
+
+
+
+
+
